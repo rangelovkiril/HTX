@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../pages/navbar";
 import Footer from "../pages/Footer";
 import Link from "next/link";
@@ -44,7 +45,7 @@ const SubjectsPage = () => {
   ];
 
   return (
-    <div>
+    <>
       <Navbar />
       <Box
         sx={{
@@ -75,7 +76,7 @@ const SubjectsPage = () => {
         </Box>
       </Box>
       <Footer />
-    </div>
+    </>
   );
 };
 

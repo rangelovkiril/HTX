@@ -4,20 +4,11 @@ pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
 
-contract Rating is ERC20, ERC20Burnable, Ownable, ERC20Permit, ERC20Votes {
-    constructor(address initialOwner)
-        ERC20("Rating", "TUES")
-        Ownable(initialOwner)
-        ERC20Permit("Rating")
-    {}
-
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
-    }
+contract ReviewCoin is ERC20, ERC20Burnable, ERC20Permit, ERC20Votes {
+    constructor() ERC20("ReviewCoin", "RVC") ERC20Permit("ReviewCoin") {}
 
     // The following functions are overrides required by Solidity.
 
