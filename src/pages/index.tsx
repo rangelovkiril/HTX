@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className={styles["home-page"]}>
       <Navbar />
       <div>
-        <h1>Welcome to the Home Page</h1>
+        <h1>Добре дошли!</h1>
       </div>
       <Footer />
     </div>
