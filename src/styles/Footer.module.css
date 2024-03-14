@@ -1,4 +1,10 @@
 .footer {
+  padding: 20px;
+  font-size: 1.5rem; 
+  height: 80px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
   background-color: #333;
   color: white;
   padding: 20px 0;
@@ -12,4 +18,20 @@
   color: white;
   text-decoration: none;
   margin: 0 10px;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer li {
+  margin-right: 20px; 
+}
+
+.footer li:last-child {
+  margin-right: 0;
 }
