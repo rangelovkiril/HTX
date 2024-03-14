@@ -1,14 +1,22 @@
 import Navbar from "../pages/navbar";
 import Footer from "../pages/Footer";
+import Link from "next/link";
 import styles from "../styles/AskForReviewPage.module.css";
-import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 
 const AskForReviewPage = () => {
   const [title, setTitle] = useState("");
   const [subject, setSubject] = useState("");
   const [description, setDescription] = useState("");
-  const subjects = ["Math", "Physics", "Chemistry", "Biology"];
+  const subjects = [
+    "Математика",
+    "Физика",
+    "Химия",
+    "Биология",
+    "Програмиране",
+    "История",
+    "Английски език",
+  ];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,33 +25,6 @@ const AskForReviewPage = () => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "100vh",
-        }}
-      >
-        <Typography variant="h4" component="div">
-          Subjects
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            width: "100%",
-            padding: "10px",
-          }}
-        >
-          {subjects.map((subject, index) => (
-            <SubjectBox key={index} name={subject} />
-          ))}
-        </Box>
-      </Box>
       <h1>Ask for Review</h1>
       <form onSubmit={handleSubmit}>
         <div className={styles.formGroup}>

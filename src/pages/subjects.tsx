@@ -1,11 +1,7 @@
 import Navbar from "../pages/navbar";
 import Footer from "../pages/Footer";
-<<<<<<< Updated upstream
 import Link from "next/link";
 import { Box, Button, Typography, Grid } from "@mui/material";
-=======
-import { Box, Button, Typography } from "@mui/material";
->>>>>>> Stashed changes
 
 const SubjectBox = ({ name }) => {
   return (
@@ -21,7 +17,7 @@ const SubjectBox = ({ name }) => {
         borderRadius: "5px",
         padding: "10px",
         margin: "10px",
-        '&:hover': {
+        "&:hover": {
           boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",
         },
       }}
@@ -38,13 +34,13 @@ const SubjectBox = ({ name }) => {
 
 const SubjectsPage = () => {
   const subjects = [
-    'Математика',
-    'Физика',
-    'Химия',
-    'Биология',
-    'Програмиране',
-    'История',
-    'Английски език',
+    "Математика",
+    "Физика",
+    "Химия",
+    "Биология",
+    "Програмиране",
+    "История",
+    "Английски език",
   ];
 
   return (
