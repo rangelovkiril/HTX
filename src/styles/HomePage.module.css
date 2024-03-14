@@ -1,0 +1,11 @@
+.home-page {
+  text-align: center;
+  height: calc(100vh - 150px); /* Adjust for navbar and footer height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-page h1 {
+  margin-bottom: 20px;
+}
