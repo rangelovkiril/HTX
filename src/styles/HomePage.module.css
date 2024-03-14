@@ -4,8 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 80px;
 }
 
 .home-page h1 {
   margin-bottom: 25px;
+}
+
+.content {
+  margin-top: 80px;
 }
