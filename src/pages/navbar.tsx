@@ -11,6 +11,9 @@ const Navbar = () => {
         <li>
           <Link href="/subjects">Subjects</Link>
         </li>
+        <li>
+          <Link href="/ask-for-review">Ask for Review</Link>
+        </li>
       </ul>
     </nav>
   );

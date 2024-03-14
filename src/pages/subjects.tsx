@@ -1,7 +1,11 @@
 import Navbar from "../pages/navbar";
 import Footer from "../pages/Footer";
+<<<<<<< Updated upstream
 import Link from "next/link";
 import { Box, Button, Typography, Grid } from "@mui/material";
+=======
+import { Box, Button, Typography } from "@mui/material";
+>>>>>>> Stashed changes
 
 const SubjectBox = ({ name }) => {
   return (
