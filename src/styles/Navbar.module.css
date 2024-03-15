@@ -3,7 +3,7 @@
   color: white;
   padding: 20px;
   font-size: 1.5rem; 
-  height: 50px; 
+  height: 40px; 
   position: fixed;
   display: flex;
   justify-content: center; 
@@ -11,10 +11,7 @@
   top: 0;
   left: 0;
   right: 0;
-<<<<<<< HEAD:src/components/Navbar/Navbar.module.scss
   z-index: 999;
-=======
-  z-index: 999; 
 }
 
 .navbar ul {
