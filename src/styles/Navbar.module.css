@@ -1,18 +1,18 @@
 .navbar {
-  color: white;
+  background: linear-gradient(90deg, #320096 0%, #8e2de2 100%);
+  color: #fff;
   padding: 20px;
-  font-size: 1.5rem; 
-  height: 20px; 
+  font-size: 1.5rem;
+  height: 50px;
   position: fixed;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999;
-  border-bottom: 1px solid black;
-
+  border-bottom: 1px solid #ddd;
 }
 
 .navbar ul {
@@ -21,7 +21,6 @@
   align-items: center;
   list-style-type: none;
   padding: 0;
-  
 }
 
 .navbar li {
@@ -29,16 +28,16 @@
   margin-right: 20px;
 }
 
-.navbar li :hover {
-  background-color: wheat;
+.navbar li:hover {
+  background-color: #554980;
   border-radius: 5px;
 }
 
 .navbar li:last-child {
-  margin-right: 0; 
+  margin-right: 0;
 }
 
 .navbar a {
-  color:  black;
+  color: #fff;
   text-decoration: none;
 }

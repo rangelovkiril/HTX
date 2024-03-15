@@ -22,7 +22,7 @@ const FeedbackPage: React.FC = () => {
         posts.forEach((post) => {
             const timeoutId = setTimeout(() => {
                 removePost(post.id);
-            }, 	3000); //86400000
+            }, 	86400000); 
             timeoutIds.push(timeoutId);
         });
 
