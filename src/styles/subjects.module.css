@@ -1,0 +1,41 @@
+.subjects-page {
+    text-align: center;
+    height: calc(100vh - 150px); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+<<<<<<< HEAD:src/components/screens/Subjects/Subjects.module.scss
+}
+  > h1 {
+=======
+  .subjects-page h1 {
+>>>>>>> parent of e927b4d (Refactor front-end architecture):src/styles/subjects.module.css
+    margin-bottom: 20px;
+  }
+  
+  .subjects-page ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .subjects-page ul li {
+    margin-bottom: 10px;
+  }
+  
+  .subjects-page ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+<<<<<<< HEAD:src/components/screens/Subjects/Subjects.module.scss
+  
+    &:hover {
+=======
+  .subjects-page ul li a:hover {
+>>>>>>> parent of e927b4d (Refactor front-end architecture):src/styles/subjects.module.css
+    color: #555;
+  }
+  
