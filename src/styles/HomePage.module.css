@@ -1,6 +1,5 @@
 .home-page {
   text-align: center;
-  padding : 25px;
   height: calc(100vh - 150px); 
   display: flex;
   flex-direction: column;
