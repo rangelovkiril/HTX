@@ -1,5 +1,5 @@
-import Navbar from "../pages/navbar";
-import Footer from "../pages/Footer";
+import Navbar from "./navbar";
+import Footer from "./Footer";
 import Link from "next/link";
 import styles from "../styles/AskForReviewPage.module.css";
 import { useState } from "react";
