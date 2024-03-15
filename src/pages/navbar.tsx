@@ -1,8 +1,7 @@
-import React from "react";
+import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
-import styles from "./Navbar.module.scss";
 
-export default function NavBar (){
+const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
@@ -13,14 +12,14 @@ export default function NavBar (){
           <Link href="/subjects">Subjects</Link>
         </li>
         <li>
-          <Link href="/ask-for-review">Ask for Review</Link>
+          <Link href="/ask-for-review">Ask For Review</Link>
         </li>
         <li>
-          <Link href = "/feedback">Feedback</Link>
+          <Link href="/feedback">Feedback</Link>
         </li>
       </ul>
     </nav>
   );
 };
 
-
+export default Navbar;

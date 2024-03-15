@@ -11,10 +11,13 @@
   top: 0;
   left: 0;
   right: 0;
+<<<<<<< HEAD:src/components/Navbar/Navbar.module.scss
   z-index: 999;
+=======
+  z-index: 999; 
+}
 
-
-> ul {
+.navbar ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,16 +25,15 @@
   padding: 0;
 }
 
-> li {
+.navbar li {
   display: inline;
   margin-right: 20px;
 }
-& li:last-child {
+.navbar li:last-child {
   margin-right: 0; 
 }
 
-> a {
+.navbar a {
   color: white;
   text-decoration: none;
-}
 }

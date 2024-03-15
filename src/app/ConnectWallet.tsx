@@ -16,7 +16,7 @@ export default function ConnectWallet() {
     if (window.ethereum) {
       const provider = new ethers.BrowserProvider(window.ethereum)
 
-      const account = await provider.getSigner()
+      const account = provider.getSigner()
 
       console.log(account)
     } 
@@ -29,6 +29,7 @@ export default function ConnectWallet() {
   <div className=''>
     <button className='' onClick={() => connectMetamask()}>Connect to Metamask</button>
   </div>
+
   );
 }
 
