@@ -15,6 +15,9 @@ export default function NavBar (){
         <li>
           <Link href="/ask-for-review">Ask for Review</Link>
         </li>
+        <li>
+          <Link href = "/feedback">Feedback</Link>
+        </li>
       </ul>
     </nav>
   );
