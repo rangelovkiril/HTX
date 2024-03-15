@@ -56,9 +56,6 @@ const SubjectsPage = () => {
           height: "100vh",
         }}
       >
-        <Typography variant="h4" component="div">
-          Subjects
-        </Typography>
         <Box
           sx={{
             display: "flex",
