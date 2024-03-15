@@ -4,6 +4,7 @@ import Footer from "../pages/Footer";
 import Link from "next/link";
 import { Box, Button, Typography, Grid } from "@mui/material";
 
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/screens/Subjects/Subjects.tsx
 import styles from './subjects.module.scss'
 
@@ -11,6 +12,8 @@ import styles from './subjects.module.scss'
 
 =======
 >>>>>>> parent of e927b4d (Refactor front-end architecture):src/pages/subjects.tsx
+=======
+>>>>>>> parent of e927b4d (Refactor front-end architecture)
 const SubjectBox = ({ name }) => {
   return (
     <Box
@@ -77,21 +80,29 @@ const SubjectsPage = () => {
             flexWrap: "wrap",
           }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/screens/Subjects/Subjects.tsx
           {/* Map through subjects array */}
 =======
 >>>>>>> parent of e927b4d (Refactor front-end architecture):src/pages/subjects.tsx
+=======
+>>>>>>> parent of e927b4d (Refactor front-end architecture)
           {subjects.map((subject, index) => (
             <SubjectBox key={index} name={subject} />
           ))}
         </Box>
       </Box>
+<<<<<<< HEAD
 <<<<<<< HEAD:src/components/screens/Subjects/Subjects.tsx
     </div>
 =======
       <Footer />
     </>
 >>>>>>> parent of e927b4d (Refactor front-end architecture):src/pages/subjects.tsx
+=======
+      <Footer />
+    </>
+>>>>>>> parent of e927b4d (Refactor front-end architecture)
   );
 };
 

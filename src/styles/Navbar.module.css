@@ -16,7 +16,10 @@
 =======
   z-index: 999; 
 }
+<<<<<<< HEAD
 >>>>>>> parent of e927b4d (Refactor front-end architecture):src/styles/Navbar.module.css
+=======
+>>>>>>> parent of e927b4d (Refactor front-end architecture)
 
 .navbar ul {
   display: flex;
