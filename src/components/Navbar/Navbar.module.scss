@@ -12,9 +12,9 @@
   left: 0;
   right: 0;
   z-index: 999; 
-}
 
-.navbar ul {
+
+> ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,15 +22,16 @@
   padding: 0;
 }
 
-.navbar li {
+> li {
   display: inline;
   margin-right: 20px;
 }
-.navbar li:last-child {
+& li:last-child {
   margin-right: 0; 
 }
 
-.navbar a {
+> a {
   color: white;
   text-decoration: none;
+}
 }

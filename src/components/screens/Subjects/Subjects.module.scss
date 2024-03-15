@@ -4,28 +4,29 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
   
-  .subjects-page h1 {
+  
+  > h1 {
     margin-bottom: 20px;
   }
   
-  .subjects-page ul {
+  > ul {
     list-style-type: none;
     padding: 0;
-  }
   
-  .subjects-page ul li {
+  
+  > li {
     margin-bottom: 10px;
   }
   
-  .subjects-page ul li a {
+  > a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
-  }
   
-  .subjects-page ul li a:hover {
+  
+    &:hover 
     color: #555;
   }
-  
+}
+}
