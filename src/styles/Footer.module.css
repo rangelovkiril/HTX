@@ -1,30 +1,37 @@
 .footer {
-  padding: 20px;
-  font-size: 1.5rem; 
-  height: 50px; 
+  font-size: 1rem; 
+  position: fixed;
+  height: 40px; 
   display: flex;
   justify-content: center; 
   align-items: center; 
-  background-color: #333;
   color: white;
-  padding: 20px 0;
-  position: absolute;
-  bottom: 0;
+  padding: 5px 5%; /* Adjust padding with percentage */
+  bottom: 0px;
   width: 100%;
-  text-align: center;
+  min-width: 300px;
+  max-height: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: flex-end; /* Align text to the right */
+  align-items: center;
+  width: 100%;
 }
 
 .footer a {
-  color: white;
+  color: black;
   text-decoration: none;
   margin: 0 10px;
+
 }
 
 .footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style-type: none;
+  list-style-type: none; 
   padding: 0;
 }
 

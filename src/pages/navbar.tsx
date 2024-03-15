@@ -4,6 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
+      <h1></h1>
       <ul>
         <li>
           <Link href="/">Home</Link>
