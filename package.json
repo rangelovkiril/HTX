@@ -18,17 +18,7 @@
     "next": "14.1.3",
     "react": "^18",
     "react-dom": "^18",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "react-router-dom": "^6.22.3",
-    "sass": "^1.72.0",
-    "scss": "^0.2.4"
-=======
     "react-router-dom": "^6.22.3"
->>>>>>> parent of e927b4d (Refactor front-end architecture)
-=======
-    "react-router-dom": "^6.22.3"
->>>>>>> parent of e927b4d (Refactor front-end architecture)
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^4.0.0",
