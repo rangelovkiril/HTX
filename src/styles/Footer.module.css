@@ -12,19 +12,22 @@
   bottom: 0;
   width: 100%;
   text-align: center;
+  min-width: 300px;
+  max-height: 40px;
 }
 
 .footer a {
   color: white;
   text-decoration: none;
   margin: 0 10px;
+
 }
 
 .footer ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style-type: none;
+  list-style-type: none; 
   padding: 0;
 }
 
