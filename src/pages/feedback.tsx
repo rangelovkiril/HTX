@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import { Box, TextField, IconButton } from '@mui/material';
-import { ThumbUp, ThumbDown } from '@mui/icons-material';
-import Navbar from './navbar';
-import Footer from './Footer';
-import styles from '../styles/FeedbackPage.module.css';
+import React, { useState, useEffect } from 'react'
+import { Box, TextField, IconButton } from '@mui/material'
+import { ThumbUp, ThumbDown } from '@mui/icons-material'
+import Navbar from './navbar'
+import Footer from './Footer'
+import styles from '../styles/FeedbackPage.module.css'
 
 interface Post {
-    id: number;
-    content: string;
-    likes: number;
-    dislikes: number;
+    id: number
+    content: string
+    likes: number
+    dislikes: number
 }
 
 const FeedbackPage: React.FC = () => {
-    const [posts, setPosts] = useState<Post[]>([]);
-    const [newPostContent, setNewPostContent] = useState<string>('');
+    const [posts, setPosts] = useState<Post[]>([])
+    const [newPostContent, setNewPostContent] = useState<string>('')
 
     useEffect(() => {
-        const timeoutIds: NodeJS.Timeout[] = [];
+        const timeoutIds: NodeJS.Timeout[] = []
 
         posts.forEach((post) => {
             const timeoutId = setTimeout(() => {
@@ -28,10 +28,10 @@ const FeedbackPage: React.FC = () => {
 
         return () => {
             timeoutIds.forEach((timeoutId) => {
-                clearTimeout(timeoutId);
-            });
-        };
-    }, [posts]);
+                clearTimeout(timeoutId)
+            })
+        }
+    }, [posts])
 
     const handlePost = () => {
         if (newPostContent.trim() !== '') {
@@ -40,30 +40,30 @@ const FeedbackPage: React.FC = () => {
                 content: newPostContent,
                 likes: 0,
                 dislikes: 0,
-            };
-            setPosts([...posts, newPost]);
-            setNewPostContent('');
+            }
+            setPosts([...posts, newPost])
+            setNewPostContent('')
         }
-    };
+    }
 
     const handleLike = (postId: number) => {
         const updatedPosts = posts.map((post) =>
             post.id === postId ? { ...post, likes: post.likes + 1 } : post
-        );
-        setPosts(updatedPosts);
-    };
+        )
+        setPosts(updatedPosts)
+    }
 
     const handleDislike = (postId: number) => {
         const updatedPosts = posts.map((post) =>
             post.id === postId ? { ...post, dislikes: post.dislikes + 1 } : post
-        );
-        setPosts(updatedPosts);
-    };
+        )
+        setPosts(updatedPosts)
+    }
 
     const removePost = (postId: number) => {
-        const updatedPosts = posts.filter((post) => post.id !== postId);
-        setPosts(updatedPosts);
-    };
+        const updatedPosts = posts.filter((post) => post.id !== postId)
+        setPosts(updatedPosts)
+    }
 
     return (
         <div>
@@ -105,7 +105,7 @@ const FeedbackPage: React.FC = () => {
             </div>
             <Footer />
         </div>
-    );
-};
+    )
+}
 
-export default FeedbackPage;
+export default FeedbackPage
