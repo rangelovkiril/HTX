@@ -1,12 +1,10 @@
 import React from "react";
-import Navbar from "../../Navbar/Navbar";
+import Navbar from "../pages/navbar";
+import Footer from "../pages/Footer";
+import Link from "next/link";
 import { Box, Button, Typography, Grid } from "@mui/material";
 
-import styles from './subjects.module.scss'
-
-// TODO: Rename file and clear logic !!!
-
-const SubjectBox = ({name}) => {
+const SubjectBox = ({ name }) => {
   return (
     <Box
       sx={{
@@ -47,7 +45,8 @@ const SubjectsPage = () => {
   ];
 
   return (
-    <div>
+    <>
+      <Navbar />
       <Box
         sx={{
           display: "flex",
@@ -71,13 +70,13 @@ const SubjectsPage = () => {
             flexWrap: "wrap",
           }}
         >
-          {/* Redo it with forEach */}
-          <SubjectBox name={subjects.forEach(element => {})}></SubjectBox>
-
+          {subjects.map((subject, index) => (
+            <SubjectBox key={index} name={subject} />
+          ))}
         </Box>
       </Box>
-     
-    </div>
+      <Footer />
+    </>
   );
 };
 

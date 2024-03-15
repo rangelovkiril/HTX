@@ -1,8 +1,7 @@
-import React from "react";
+import styles from "../styles/Navbar.module.css";
 import Link from "next/link";
-import styles from "./Navbar.module.scss";
 
-export default function NavBar (){
+const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
@@ -20,4 +19,4 @@ export default function NavBar (){
   );
 };
 
-
+export default Navbar;
