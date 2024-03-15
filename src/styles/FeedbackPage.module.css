@@ -1,0 +1,36 @@
+.feedbackPage {
+  padding: 20px;
+}
+
+.feedbackPage h1 {
+  margin-bottom: 20px;
+}
+
+.feedbackPage .postBox {
+  margin-bottom: 20px;
+}
+
+.feedbackPage .postBox .postButton {
+  margin-top: 10px;
+}
+
+.feedbackPage .posts .post {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.feedbackPage .posts .post p {
+  margin-bottom: 10px;
+}
+
+.feedbackPage .posts .post .actions {
+  display: flex;
+  align-items: center;
+}
+
+.feedbackPage .posts .post .actions span {
+  margin-left: 5px;
+  margin-right: 10px;
+}
