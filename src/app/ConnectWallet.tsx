@@ -7,6 +7,7 @@ declare var window: any
 import { ethers } from 'ethers'
 // import factory from typechain
 import './mmauth_style.css'
+import { AcUnitOutlined } from '@mui/icons-material'
 
 export default function ConnectWallet() {
   // State to store and show the connected account
@@ -17,9 +18,10 @@ export default function ConnectWallet() {
     if (window.ethereum) {
       const provider = new ethers.BrowserProvider(window.ethereum)
 
-      const account = provider.getSigner()
+      const account = await provider.getSigner()
 
-      console.log(account)
+      alert(` Under ${account.address}\n` + 
+      "This function is temporary unavaible.")
     } 
     else {
       alert('Please download Metamask');
