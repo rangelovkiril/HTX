@@ -1,19 +1,20 @@
 .button button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #8e2de2;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
   position:absolute;
-  bottom: 90px;
-  right: 20px;
+  bottom:110px;
+  left: 110px;
+  padding: 30px 200px;
 }
 
 .button button:hover {
-  background-color: #1c5a00;
+  background-color: #320096;
 }
 
 
