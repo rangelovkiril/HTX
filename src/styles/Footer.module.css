@@ -24,7 +24,8 @@
   color: black;
   text-decoration: none;
   margin: 0 10px;
-
+  bottom: 0;
+  right: 0;
 }
 
 .footer ul {

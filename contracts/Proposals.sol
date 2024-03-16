@@ -50,7 +50,8 @@ contract Proposals is Ownable {
             title: _title,
             content: _content,
             timestamp: block.timestamp,
-            executed: false,
+
+executed: false,
             confirmations: 0
         });
 

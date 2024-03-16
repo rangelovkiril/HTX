@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Box, TextField, IconButton } from '@mui/material'
 import { ThumbUp, ThumbDown } from '@mui/icons-material'
 import Navbar from './navbar'
@@ -15,6 +15,23 @@ interface Post {
 const FeedbackPage: React.FC = () => {
     const [posts, setPosts] = useState<Post[]>([])
     const [newPostContent, setNewPostContent] = useState<string>('')
+
+    useEffect(() => {
+        const timeoutIds: NodeJS.Timeout[] = []
+
+        posts.forEach((post) => {
+            const timeoutId = setTimeout(() => {
+                removePost(post.id);
+            }, 	86400000); 
+            timeoutIds.push(timeoutId);
+        });
+
+        return () => {
+            timeoutIds.forEach((timeoutId) => {
+                clearTimeout(timeoutId)
+            })
+        }
+    }, [posts])
 
     const handlePost = () => {
         if (newPostContent.trim() !== '') {
@@ -40,6 +57,11 @@ const FeedbackPage: React.FC = () => {
         const updatedPosts = posts.map((post) =>
             post.id === postId ? { ...post, dislikes: post.dislikes + 1 } : post
         )
+        setPosts(updatedPosts)
+    }
+
+    const removePost = (postId: number) => {
+        const updatedPosts = posts.filter((post) => post.id !== postId)
         setPosts(updatedPosts)
     }
 
