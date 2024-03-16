@@ -9,7 +9,11 @@ const HomePage = () => {
     <div className={styles["home-page"]}>
       <Navbar />
       <div className={styles.content}>
-        <h1>Добре дошли!</h1>
+        <h1>Бъди <br></br> Активен Ученик</h1>
+        <p> Изразявайте мнението си,
+           предлагайте подобрения в образованието и сътрудничете по 
+           домашни работи чрез dF4s.
+        </p>
         <ConnectWallet></ConnectWallet>
       </div>
       <Footer />

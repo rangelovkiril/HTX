@@ -1,5 +1,5 @@
 .home-page {
-  text-align: center;
+  text-align: left;
   height: calc(100vh - 150px); 
   display: flex;
   flex-direction: column;
@@ -14,4 +14,19 @@
 
 .content {
   margin-top: 80px;
+  max-width: 600px;
+  /*padding: ;*/
+  margin-left: 100px;
+  margin-top: 200px;
+
 } 
+.content h1 {
+  font-size: 60px;
+  color: #222;
+
+}
+.content p {
+  margin: 10px 0 30px;
+  font-size: 20px;
+  color:#222;
+}
