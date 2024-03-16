@@ -16,10 +16,10 @@ export default function ConnectWallet() {
 
     if (window.ethereum) {
       const provider = new ethers.BrowserProvider(window.ethereum)
-
       const account = provider.getSigner()
-
-      console.log(account)
+      
+       alert(` Under ${account.address}\n` + 
+      `This function is temporary unavaible.`)
     } 
     else {
       alert('Please download Metamask');
