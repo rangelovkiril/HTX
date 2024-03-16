@@ -1,17 +1,63 @@
-import { ethers } from "hardhat"
+const hre = require('hardhat')
+import { ethers, network } from 'hardhat'
+import * as fs from 'node:fs'
+import * as path from 'path'
 
-async function main() {
+async function deploy() {
+    if (network.name === 'hardhat') {
+        console.warn(
+            'You are trying to deploy a contract to the Hardhat Network, which' +
+                'get automatecally created and destroyed ecery time. Use Hardhat' +
+                " option '--network localhost'"
+        )
+    }
 
-  const rvc = await ethers.deployContract("ReviewCoin")
+    const [deployer] = await ethers.getSigners()
 
-  await rvc.waitForDeployment()
+    console.log('Deployed with ', await deployer.address)
 
-  console.log(
-    `Deployed on ${rvc.target}`
-  );
+    const Proposals = await ethers.getContractFactory('Proposals', deployer)
+    const proposals = await Proposals.deploy(deployer.address)
+    await proposals.waitForDeployment()
+
+    saveFrontendFiles({
+        Proposals: proposals
+    })
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+async function saveFrontendFiles(contracts: object) {
+  const contractsDir = path.join(__dirname, '../', 'src/contracts')
+
+  if (!fs.existsSync(contractsDir)) {
+      fs.mkdirSync(contractsDir)
+  }
+
+  for (const [name, contract] of Object.entries(contracts)) {
+      const contractFactory = await ethers.getContractFactory(name)
+      const contractInterface = contractFactory.interface
+      const contractBytecode = contractFactory.bytecode
+
+      if (contract) {
+          fs.writeFileSync(
+              path.join(contractsDir, `${name}-contract-address.json`),
+              JSON.stringify({ [name]: contract.address })
+          )
+      }
+
+    
+      const ContractArtifact = hre.artifacts.readArtifact(name)
+    
+      fs.writeFileSync(
+        path.join(contractsDir, '/', name + '.json'),
+        JSON.stringify(ContractArtifact, null, 2))
+  }
+}
+
+
+
+deploy()
+.then(() => process.exit(0))
+.catch((error) => {
+  console.log(error)
+  process.exit(0)
+})

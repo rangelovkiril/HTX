@@ -18,8 +18,10 @@ const AskForReviewPage = () => {
     "Английски език",
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
+
+    console.log(e)
   };
 
   return (
